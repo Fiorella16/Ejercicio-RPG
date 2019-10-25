@@ -28,8 +28,8 @@ public class TrollTest
         Stick stick=new Stick();
         items.Add(armor);
         items.Add(stick);
-        Assert.AreEqual(armor.GetType(), troll.Items[0].GetType());
-        Assert.AreEqual(stick.GetType(), troll.Items[1].GetType());
+        Assert.AreEqual(armor.GetType(), troll.Items[1].GetType());
+        Assert.AreEqual(stick.GetType(), troll.Items[0].GetType());
 
     }
     }
