@@ -9,7 +9,7 @@ namespace RoleplayGame.Library.Test
     {
         [Test]
         // La creación de un Elf le asigna vida 120 
-        public void Elf(string name)
+        public void Elf()
         {
             Elf elfo = new Elf("Elfo");
             int Expected = 120;
@@ -20,7 +20,7 @@ namespace RoleplayGame.Library.Test
     // la creación de un elf le asigna  un item Robes
     [Test]
     
-        public void Elf1(string name)
+        public void Elf1()
     {
         List<IItem> items=new List<IItem>();
         Elf elfo = new Elf("Elfo");

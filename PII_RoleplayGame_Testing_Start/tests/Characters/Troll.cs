@@ -10,7 +10,7 @@ public class TrollTest
     {
         [Test]
         // /La creación de un Troll le asigna vida 150
-        public void Troll(string name)
+        public void Troll()
         {
             Troll troll = new Troll("trol");
             int Expected = 150;
@@ -20,7 +20,7 @@ public class TrollTest
 
     // la creación de un Troll le asigna  un item Armor y Stick.
     [Test]
-        public void Troll1(string name)
+        public void Troll1()
     {
         List<IItem> items=new List<IItem>();
         Troll troll = new Troll("trol");
