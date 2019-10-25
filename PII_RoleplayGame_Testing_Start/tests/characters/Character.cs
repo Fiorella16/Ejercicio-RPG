@@ -14,9 +14,9 @@ namespace RoleplayGame.Library.Test
         {
             Elf elfo = new Elf("Elfo");
             Magic magia=new Magic();
-            List<IItem> items=new List<IItem>();
-            items.Add(magia);
-            int Expected = 80;
+            int original=elfo.AttackPower;
+            elfo.AddItem(magia);
+            int Expected = magia.AttackPower+ original;
 
             Assert.AreEqual(Expected, elfo.AttackPower);
         }
