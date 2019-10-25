@@ -34,11 +34,11 @@ namespace RoleplayGame.Library.Test
         
         }
 
-[Test]
+        [Test]
         public void TestDefGtAtk()
         {
             //SILVER 16. Cuando un personaje recibe un ataque y su defensa es mayor al ataque, su vida no se modifica.
-            bool nonModified = false;
+            bool Modified = false;
 
             List<Character> allChars = new List<Character>()
             {
@@ -51,18 +51,17 @@ namespace RoleplayGame.Library.Test
             {
                 int originalHP = _char.Health;
                 _char.ReceiveAttack(_char.DefensePower-1); //le hago recibir daño igual a su defensa - 1
-                nonModified = nonModified == 
-                if (_char.Health == )
+                if (_char.Health != originalHP)
                 {
-                    nonModified = true; //chequeo si la vida es menor a 0 para el char, si lo es, setteo belowZero a true
+                    Modified = true; //chequeo si la vida se modificó, si fue así, seteo Modified a true
                 }
             }
 
             bool expected = false;
 
-            Assert.AreEqual(expected, belowZero);
+            Assert.AreEqual(expected, Modified);
         
         
-        
+        }   
     }
 }
